@@ -6,14 +6,19 @@ import PostItem from './components/PostItem';
 
 
 function App() {
-  const [value, setValue] = useState('ТЕКСТ В ИНПУТЕ')
+  const [posts, setPosts] = useState([
+    {id: 1, title: 'Javascript', body: 'Description'},
+    {id: 2, title: 'Python', body: 'Description'},
+    {id: 3, title: 'Java', body: 'Description'},
+    ])
 
   return (
     <div className="App">
-      <Counter/>
-      <PostItem/>
-      <PostItem/>
-      <PostItem/>
+      <h1>Список постов</h1>
+      {posts.map((post) => 
+        <PostItem post={post} key={post.id}/>
+        )
+      }
     </div>
   );
 }
