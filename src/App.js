@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import React from 'react';
+import './styles/App.css';
 import Counter from './components/Counter';
+import PostItem from './components/PostItem';
 
 
 function App() {
@@ -9,6 +11,9 @@ function App() {
   return (
     <div className="App">
       <Counter/>
+      <PostItem/>
+      <PostItem/>
+      <PostItem/>
     </div>
   );
 }
